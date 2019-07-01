@@ -9,7 +9,7 @@
 In the appsettings.json file, set the connection string to the database in the format:
 ```
 "ConnectionStrings": {
-    "DefaultConnection": "server=NetworkAddress;port=Port;database=NameDb;uid=root;password=PWD;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
+    "DefaultConnection": "server=__NetworkAddress__;port=Port;database=NameDb;uid=root;password=PWD;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
   }  
 ```
 * NetworkAddress - host database IP or DNS 
