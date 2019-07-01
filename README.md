@@ -17,6 +17,24 @@ In the appsettings.json file, set the connection string to the database in the a
 * __NameDb__ - name of schema in database
 * __PWD__ - database user password
 
+## General description
+
+The project consists of one assembly which includes three libraries.
+
+/Etalon.Web - WebApi
+/Etalon.Services - business logic
+/Etalon.Data - data source access, description of data models
+
+Solution file "Etalon.sln".
+
+To build and publish the project you need to run:
+```
+dotnet publish Etalon.sln  -c Release
+```
+The default way to build results __Etalon.Web\bin\Release\netcoreapp2.2\publish__
+
+Additional parameters of the command can be found in the link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21
+
 ## Configuring authorization by tokens
 
 In the appsettings.json file, set the parameters in the area:
@@ -33,3 +51,14 @@ In the appsettings.json file, set the parameters in the area:
 "SigningKey": "cecc8978-943d-4434-bfaa-2e7d4a803b2a",
 ```
 * __MinutesAccessToken__ - access token time, default time 30 minutes. Example:
+```
+"ExpiryInMinutesAccess": "30",
+```
+* __MinutesRefreshToken__ - refresh token time, default time 60 minutes. Example:
+```
+"ExpiryInMinutesRefresh": "60",
+```
+
+##Running tests
+
+in developing...
