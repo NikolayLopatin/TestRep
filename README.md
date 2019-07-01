@@ -25,7 +25,7 @@ Additional parameters of the command can be found in the link: https://docs.micr
 
 ## Database access settings
 
-In the appsettings.json file (default path Etalon.Web\bin\Release\netcoreapp2.2\publish), set the connection string to the database in the area:
+In the __appsettings.json__ file (default path Etalon.Web\bin\Release\netcoreapp2.2\publish), set the connection string to the database in the area:
 ```
 "ConnectionStrings": {
     "DefaultConnection": "server=__NetworkAddress__;port=__Port__;database=__NameDb__;uid=root;password=__PWD__;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
@@ -38,7 +38,7 @@ In the appsettings.json file (default path Etalon.Web\bin\Release\netcoreapp2.2\
 
 ## Configuring authorization by tokens
 
-In the appsettings.json (default path Etalon.Web\bin\Release\netcoreapp2.2\publish) file, set the parameters in the area:
+In the __appsettings.json__ file (default path Etalon.Web\bin\Release\netcoreapp2.2\publish), set the parameters in the area:
 ```
 "Jwt": {
     "Site": "http://www.security.org",
