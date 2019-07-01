@@ -63,3 +63,7 @@ In the appsettings.json (default path Etalon.Web\bin\Release\netcoreapp2.2\publi
 ## Running tests
 
 in developing...
+
+## Other service
+
+not defined
