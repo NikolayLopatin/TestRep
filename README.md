@@ -9,7 +9,10 @@
 In the appsettings.json file, set the connection string to the database in the format:
 ```
 "ConnectionStrings": {
-    "DefaultConnection": "server=127.0.0.1;port=3306;database=etalonbd;uid=root;password=33Tyjnf;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
-  }
-  
+    "DefaultConnection": "server=NetworkAddress;port=Port;database=NameDb;uid=root;password=PWD;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
+  }  
 ```
+* NetworkAddress - host database IP or DNS 
+* Port -  port for connection at database
+* NameDb - name of schema in database
+* PWD - database user password
