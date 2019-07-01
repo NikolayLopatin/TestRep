@@ -4,9 +4,28 @@
 1. .Net Core SDK 2.2.300 for (download as needed for your operating system: https://dotnet.microsoft.com/download/dotnet-core/2.2)
 2. MySQL Server 8.0
 
+## General description
+
+The project consists of one assembly which includes three libraries.
+
+* Etalon.Web - WebApi
+* Etalon.Services - business logic
+* Etalon.Data - data source access, description of data models
+
+Solution file "Etalon.sln".
+
+To build and publish the project you need to run:
+```
+dotnet publish Etalon.sln  -c Release
+```
+The default path to results build: __Etalon.Web\bin\Release\netcoreapp2.2\publish__
+
+Additional parameters of the command can be found in the link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21
+
+
 ## Database access settings
 
-In the appsettings.json file, set the connection string to the database in the area:
+In the appsettings.json file (default path Etalon.Web\bin\Release\netcoreapp2.2\publish), set the connection string to the database in the area:
 ```
 "ConnectionStrings": {
     "DefaultConnection": "server=__NetworkAddress__;port=__Port__;database=__NameDb__;uid=root;password=__PWD__;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
@@ -17,27 +36,9 @@ In the appsettings.json file, set the connection string to the database in the a
 * __NameDb__ - name of schema in database
 * __PWD__ - database user password
 
-## General description
-
-The project consists of one assembly which includes three libraries.
-
-/Etalon.Web - WebApi
-/Etalon.Services - business logic
-/Etalon.Data - data source access, description of data models
-
-Solution file "Etalon.sln".
-
-To build and publish the project you need to run:
-```
-dotnet publish Etalon.sln  -c Release
-```
-The default way to build results __Etalon.Web\bin\Release\netcoreapp2.2\publish__
-
-Additional parameters of the command can be found in the link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21
-
 ## Configuring authorization by tokens
 
-In the appsettings.json file, set the parameters in the area:
+In the appsettings.json (default path Etalon.Web\bin\Release\netcoreapp2.2\publish) file, set the parameters in the area:
 ```
 "Jwt": {
     "Site": "http://www.security.org",
@@ -59,6 +60,6 @@ In the appsettings.json file, set the parameters in the area:
 "ExpiryInMinutesRefresh": "60",
 ```
 
-##Running tests
+## Running tests
 
 in developing...
