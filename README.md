@@ -55,8 +55,9 @@ Add the Env variable __"JWT__EXPIRYINMINUTESREFRESH"__ - refresh token time, def
 
 ## Mail setup
 
-Add the Env variable __"EMAIL__EMAIL"__ - the name of the mailbox that will be send email
-Add the Env variable __"EMAIL__PASSWORD"___ - the password of the mailbox
+Add the Env variable __"EMAIL__EMAIL"__ - the name of the mailbox that will be send email.
+
+Add the Env variable __"EMAIL__PASSWORD"___ - the password of the mailbox.
 
 ## Running WebApi
 
