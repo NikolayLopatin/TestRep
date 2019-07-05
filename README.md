@@ -26,7 +26,7 @@ To build and publish the project you need to run:
 ```
 dotnet publish ./Etalon.Web/Etalon.Web.csproj  -c Release
 ```
-The default path to results build: __Etalon.Web\bin\Release\netcoreapp2.2\publish__
+The default path to results build: __Etalon.Web/bin/Release/netcoreapp2.2/publish__
 
 Additional parameters of the command can be found in the link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21
 
@@ -35,7 +35,7 @@ Additional parameters of the command can be found in the link: https://docs.micr
 
 Your system should have a MySQL server installed. Create a data schema and restore it from the __backup.sql__ file.
 
-Add the Env variable "CUSTOMCONNSTR_EtalonDb" and set value:"server=__NetworkAddress__;port=__Port__;database=__NameDb__;uid=root;password=__PWD__;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
+Add the Env variable __"CUSTOMCONNSTR_EtalonDb"__ and set value:"server=__NetworkAddress__;port=__Port__;database=__NameDb__;uid=root;password=__PWD__;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
 
 * __NetworkAddress__ - host database IP or DNS 
 * __Port__ -  port for connection at database
@@ -44,19 +44,19 @@ Add the Env variable "CUSTOMCONNSTR_EtalonDb" and set value:"server=__NetworkAdd
 
 ## Configuring authorization by tokens
 
-Add the Env variable __"JWT__SITE" and set value:"http://www.security.org"
-Add the Env variable __"JWT__SIGNINGKEY" - the key to sign the token, note the key value should not be in the public domain. Example: 
+Add the Env variable __"JWT__SITE"__ and set value:"http://www.security.org"
+Add the Env variable __"JWT__SIGNINGKEY"__ - the key to sign the token, note the key value should not be in the public domain. Example: 
 ```
 JWT__SIGNINGKEY="cecc8978-943d-4434-bfaa-2e7d4a803b2a"
 ```
-Add the Env variable __"JWT__EXPIRYINMINUTESACCESS" - access token time, default time 30 minutes. 
+Add the Env variable __"JWT__EXPIRYINMINUTESACCESS"__ - access token time, default time 30 minutes. 
 
-Add the Env variable __"JWT__EXPIRYINMINUTESREFRESH" - refresh token time, default time 60 minutes. Example:
+Add the Env variable __"JWT__EXPIRYINMINUTESREFRESH"__ - refresh token time, default time 60 minutes. Example:
 
 ## Mail setup
 
-Add the Env variable __"EMAIL__EMAIL" - the name of the mailbox that will be send email
-Add the Env variable __"EMAIL__PASSWORD" - the password of the mailbox
+Add the Env variable __"EMAIL__EMAIL"__ - the name of the mailbox that will be send email
+Add the Env variable __"EMAIL__PASSWORD"___ - the password of the mailbox
 
 ## Running WebApi
 
