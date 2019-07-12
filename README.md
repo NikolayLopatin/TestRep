@@ -34,13 +34,13 @@ Additional parameters of the command can be found in the link: https://docs.micr
 ## Database
 
 Add the Env variable __"DB_HOST"__ - host database IP or DNS 
-***
+
 Add the Env variable __"DB_PORT"__ - port for connection at database
-***
+
 Add the Env variable __"DB_NAME"__ - name of schema in database 
-***
+
 Add the Env variable __"DB_USER"__ - database user 
-***
+
 Add the Env variable __"DB_PASSWORD" - database user password
 
 ## Configuring authorization by tokens
