@@ -46,6 +46,7 @@ Add the Env variable __"DB_PASSWORD__" - database user password
 ## Configuring authorization by tokens
 
 Add the Env variable __"JWT__SITE"__ and set value:"http://www.security.org"
+
 Add the Env variable __"JWT__SIGNINGKEY"__ - the key to sign the token, note the key value should not be in the public domain. Example: 
 ```
 JWT__SIGNINGKEY="cecc8978-943d-4434-bfaa-2e7d4a803b2a"
@@ -58,7 +59,15 @@ Add the Env variable __"JWT__EXPIRYINMINUTESREFRESH"__ - refresh token time, def
 
 Add the Env variable __"EMAIL__EMAIL"__ - the name of the mailbox that will be send email.
 
-Add the Env variable __"EMAIL__PASSWORD"___ - the password of the mailbox.
+Add the Env variable __"EMAIL__PASSWORD"__ - the password of the mailbox.
+
+## Swagger
+
+Add the Env variable __"SWAGGER_PATHFILE"__ - file for Swagger with WebApi specification.
+
+## Log Setup File Path
+
+Add the Env variable __"NLOG_PATHFILE"__ - log setup file path.
 
 ## Running WebApi
 
@@ -72,32 +81,6 @@ dotnet Etalon.Web.dll --urls "__URL__"
 It is recommended to set the value: --urls "http://127.0.0.1:5500". To set the default port, remove the --urls key (default URL: "http://localhost:5000"). Example: --urls "http://*:8000" (Listining all network interface on port 8000) or --urls "http://192.168.87.65:7000;http://192.168.87.65:7001" (Listining IP 192.168.87.65 on port 7000 and 7001)
 
 The Etalon.Web.dll is in the directory: ./Etalon.Web/bin/Ralease/netcoreapp2.2/publish/
-
-**Attention, you need to launch the application from its directory, otherwise the application will not be able to load the settings file.**
-
-## Settings nginx
-
-Install nginx and connect the ssl certificate.
-
-In the __default.conf__ file (default path /etc/nginx/conf.d/), set:
-
-```
-server {
-    listen        80;
-    location / {
-        proxy_pass         __URL_WEB_API__;
-        proxy_http_version 1.1;
-        proxy_set_header   Upgrade $http_upgrade;
-        proxy_set_header   Connection keep-alive;
-        proxy_set_header   Host $host;
-        proxy_cache_bypass $http_upgrade;
-        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header   X-Forwarded-Proto $scheme;
-    }
-}
-
-```
-* __URL_WEB_API__ = value "__URL__" seted Running WebApi 
 
 ## Running tests
 
