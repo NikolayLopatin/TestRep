@@ -41,7 +41,7 @@ Add the Env variable __"DB_NAME"__ - name of schema in database
 
 Add the Env variable __"DB_USER"__ - database user 
 
-Add the Env variable __"DB_PASSWORD" - database user password
+Add the Env variable __"DB_PASSWORD__" - database user password
 
 ## Configuring authorization by tokens
 
