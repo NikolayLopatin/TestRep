@@ -31,11 +31,13 @@ The default path to results build: __Etalon.Web/bin/Release/netcoreapp2.2/publis
 Additional parameters of the command can be found in the link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21
 
 
-## DataBase
+## Database
 
-Your system should have a MySQL server installed. Create a data schema and restore it from the __backup.sql__ file.
-
-Add the Env variable __"CUSTOMCONNSTR_EtalonDb"__ and set value:"server=__NetworkAddress__;port=__Port__;database=__NameDb__;uid=root;password=__PWD__;Treat Tiny As Boolean=false;Convert Zero Datetime = true"
+Add the Env variable __"DB_HOST"__ - database host
+Add the Env variable __"DB_PORT"__ - database connection port 
+Add the Env variable __"DB_NAME"__ - scheme name 
+Add the Env variable __"DB_USER"__ - database user 
+Add the Env variable __"DB_PASSWORD" - database connection password 
 
 * __NetworkAddress__ - host database IP or DNS 
 * __Port__ -  port for connection at database
